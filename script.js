@@ -1,4 +1,3 @@
-var celsius;
 $(document).ready(function() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(function(position) {
@@ -8,7 +7,6 @@ $(document).ready(function() {
       $.ajax({
         url: weatherUrl, success: function(data) {
           var temp = data.main.temp;
-          var celsius = data.main.temp;
           var city = data.name;
           var country = data.sys.country;
           var weather = data.weather[0].main;
