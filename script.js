@@ -20,11 +20,13 @@ $(document).ready(function () {
 						console.log(data.name);
 						console.log(data.sys.country);
 						console.log(data.weather[0].main);
+						console.log(data.weather[0].icon);
 						console.log("showWeather() function is working");
 						$(".weather").empty("");
 						$("#temp").append(data.main.temp + "&#176;");
 						$("#city").append(data.name);
 						$("#country").append(data.sys.country);
+						$("#icon").append("<img src='" + data.weather[0].icon + "'>");
 
 
 					}
