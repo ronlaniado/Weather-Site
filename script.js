@@ -22,7 +22,7 @@ $(document).ready(function () {
 						console.log(data.weather[0].main);
 						console.log("showWeather() function is working");
 						$(".weather").empty("");
-						$("#temp").append(data.main.temp);
+						$("#temp").append(data.main.temp + "&#176;");
 						$("#city").append(data.name);
 						$("#country").append(data.sys.country);
 
