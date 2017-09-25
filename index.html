@@ -4,6 +4,9 @@
 
   <head>
     <title>Weather</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="animate.css">
@@ -11,15 +14,23 @@
   </head>
 
   <body>
-    <p class="bounce">test</p>
-    <div class="weather" id="temp">
-    </div>
-    <div class="weather" id="city">
-    </div>
-    <div class="weather" id="country">
-    </div>
-    <div class="weather" id="icon">
-    </div>
+  <div class="text-center col-md-4 row">
+      <div class="btn btn-outline-primary weatherButton">
+        DISPLAY WEATHER
+        </div>
+
+      <div class="weather" id="temp">
+        </div>
+
+      <div class="weather" id="city">
+        </div>
+
+      <div class="weather" id="country">
+        </div>
+
+      <div class="weather" id="icon">
+        </div>
+  </div>
   </body>
 
 </html>
