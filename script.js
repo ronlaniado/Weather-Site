@@ -6,7 +6,6 @@ $(document).ready(function () {
 			var longitude = position.coords.longitude;
 			var weatherUrl = "https://fcc-weather-api.glitch.me/api/current?lat=" + latitude + "5&lon=" + longitude;
 			console.log(weatherUrl);
-
 			function showWeather() {
 				$.ajax({
 					url: weatherUrl,
