@@ -31,6 +31,10 @@ $(document).ready(function () {
 					}
 				});
 			}
+			$(".weatherButton").click(function () {
+				showWeather();
+				console.log("Weather was refreshed.");
+					});
 			showWeather();
 		});
 	}
