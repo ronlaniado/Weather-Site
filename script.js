@@ -1,4 +1,8 @@
 var temp;
+var weather;
+var city;
+var country;
+var icon;
 $(document).ready(function () {
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(function (position) {
@@ -11,15 +15,15 @@ $(document).ready(function () {
 					url: weatherUrl,
 					success: function (data) {
 						temp = data.main.temp;
-						var city = data.name;
-						var country = data.sys.country;
-						var weather = data.weather[0].main;
-						var icon = data.weather[0].icon;
-						console.log(data.main.temp);
-						console.log(data.name);
-						console.log(data.sys.country);
-						console.log(data.weather[0].main);
-						console.log(data.weather[0].icon);
+						city = data.name;
+						country = data.sys.country;
+						weather = data.weather[0].main;
+						icon = data.weather[0].icon;
+						console.log(temp);
+						console.log(city);
+						console.log(country);
+						console.log(weather);
+						console.log(icon);
 						console.log("showWeather() function is working");
 						$(".weather").empty("");
 						$("#temp").append(data.main.temp + "&#176; C");
@@ -30,7 +34,7 @@ $(document).ready(function () {
 				});
 			}
 			function toFahrenheit() {
-				var convertedTemp = temp * 1.8 + 32;
+				var convertedTemp = this.temp;
 				console.log(convertedTemp);
 			}
 			$(".weatherButton").click(function () {
