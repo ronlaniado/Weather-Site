@@ -30,19 +30,19 @@ $(document).ready(function () {
 						$("#city").append(data.name);
 						$("#country").append(data.sys.country);
 						$("#icon").append("<img src='" + data.weather[0].icon + "'>");
+						toFahrenheit();
 					}
 				});
 			}
 			function toFahrenheit() {
-				var convertedTemp = temp;
-				console.log(convertedTemp);
+				var convertedTemp = temp * 1.8 + 32;
+				console.log(Math.round(convertedTemp));
 			}
 			$(".weatherButton").click(function () {
 				showWeather();
 				console.log("Weather was refreshed.");
 					});
 			showWeather();
-			toFahrenheit();
 		});
 	}
 });

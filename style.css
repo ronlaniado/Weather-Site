@@ -3,11 +3,20 @@ html {
   font-family: 'Roboto', "Sans-Serif";
   text-align: center;
 background-color: gray;
+font-size: 40px;
 }
 
 .weatherButton {
-  font-size: 16px;
+  font-size: 60px;
+  height: 90;
+  width: 240;
 }
 body {
   background-color: gray;
+}
+.btn-secondary {
+  font-size: 12px;
+  display: inline-block;
+  margin: 0px 0px 10px 10px;
+
 }
