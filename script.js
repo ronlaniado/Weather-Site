@@ -14,7 +14,7 @@ $(document).ready(function () {
 						var city = data.name;
 						var country = data.sys.country;
 						var weather = data.weather[0].main;
-						var icon = data.weather.icon;
+						var icon = data.weather[0].icon;
 						console.log(data.main.temp);
 						console.log(data.name);
 						console.log(data.sys.country);
@@ -26,16 +26,19 @@ $(document).ready(function () {
 						$("#city").append(data.name);
 						$("#country").append(data.sys.country);
 						$("#icon").append("<img src='" + data.weather[0].icon + "'>");
-
-
 					}
 				});
+			}
+			function toFahrenheit() {
+				var convertedTemp = temp * 1.8 + 32;
+				console.log(convertedTemp);
 			}
 			$(".weatherButton").click(function () {
 				showWeather();
 				console.log("Weather was refreshed.");
 					});
 			showWeather();
+			toFahrenheit();
 		});
 	}
 });
