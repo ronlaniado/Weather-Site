@@ -34,7 +34,7 @@ $(document).ready(function () {
 				});
 			}
 			function toFahrenheit() {
-				var convertedTemp = this.temp;
+				var convertedTemp = temp;
 				console.log(convertedTemp);
 			}
 			$(".weatherButton").click(function () {
