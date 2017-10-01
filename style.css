@@ -1,9 +1,11 @@
-html {
+html, body {
   color: white;
   font-family: 'Roboto', "Sans-Serif";
   text-align: center;
 background-color: gray;
 font-size: 40px;
+// background-image: url("http://68.media.tumblr.com/62b5965afa8ebea1b6bb39046d9ec022/tumblr_myisgaZb0G1s85u2fo1_500.gif");
+// background-size: cover;
 }
 
 .weatherButton {
@@ -14,9 +16,14 @@ font-size: 40px;
 body {
   background-color: gray;
 }
-.btn-secondary {
+.buttons {
   font-size: 12px;
   display: inline-block;
-  margin: 0px 0px 10px 10px;
-
+  border-radius: 0;
+}
+.buttons:focus {
+  background: olive;
+  outline: none;
+  box-shadow: none;
+  border: none;
 }

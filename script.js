@@ -1,3 +1,4 @@
+var fahrenheitTemp;
 var temp;
 var weather;
 var city;
@@ -10,11 +11,12 @@ $(document).ready(function () {
 			var longitude = position.coords.longitude;
 			var weatherUrl = "https://fcc-weather-api.glitch.me/api/current?lat=" + latitude + "5&lon=" + longitude;
 			console.log(weatherUrl);
+
 			function showWeather() {
 				$.ajax({
 					url: weatherUrl,
 					success: function (data) {
-						temp = data.main.temp;
+						temp = Math.round(data.main.temp);
 						city = data.name;
 						country = data.sys.country;
 						weather = data.weather[0].main;
@@ -26,23 +28,30 @@ $(document).ready(function () {
 						console.log(icon);
 						console.log("showWeather() function is working");
 						$(".weather").empty("");
-						$("#temp").append(data.main.temp + "&#176; C");
+						$("#temp").append(temp + "&#176;C");
 						$("#city").append(data.name);
 						$("#country").append(data.sys.country);
 						$("#icon").append("<img src='" + data.weather[0].icon + "'>");
-						toFahrenheit();
+						function toFahrenheit() {
+							fahrenheitTemp = Math.round(temp * 1.8 + 32);
+							console.log(fahrenheitTemp);
+						}
+						$(".fahrenheit").click(function () {
+							toFahrenheit();
+							$("#temp").empty();
+							$("#temp").append(fahrenheitTemp + "&#176;F");
+
+						});
 					}
 				});
 			}
-			function toFahrenheit() {
-				var convertedTemp = temp * 1.8 + 32;
-				console.log(Math.round(convertedTemp));
-			}
+
 			$(".weatherButton").click(function () {
 				showWeather();
 				console.log("Weather was refreshed.");
 					});
-			showWeather();
+
+	showWeather();
 		});
 	}
 });
