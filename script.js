@@ -49,6 +49,7 @@ $(document).ready(function () {
 						$(".celsius").click(function() {
 							$("#temp").empty();
 							$("#temp").append(celsiusTemp + "&#176;C");
+							console.log("Temp changed to celsius");
 						})
 
 					} else {
@@ -74,7 +75,8 @@ $(document).ready(function () {
 							}
 							$(".celsius").click(function() {
 								$("#temp").empty();
-								$("#temp").append(celsiusTemp + "&#176;C")
+								$("#temp").append(celsiusTemp + "&#176;C");
+								console.log("Temp changed to celsius");
 							});
 					}
 					}
