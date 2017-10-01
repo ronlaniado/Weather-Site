@@ -48,7 +48,7 @@ $(document).ready(function () {
 						})
 						$(".celsius").click(function() {
 							$("#temp").empty();
-							$("#temp").append(celsiusTemp + "&#176;C")
+							$("#temp").append(celsiusTemp + "&#176;C");
 						})
 
 					} else {
