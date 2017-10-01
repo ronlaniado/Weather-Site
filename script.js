@@ -29,14 +29,14 @@ $(document).ready(function () {
 						console.log(weather);
 						console.log(icon);
 						console.log("showWeather() function is working");
+						$(".weather").empty("");
+						$("#city").append(data.name);
+						$("#country").append(data.sys.country);
+						$("#icon").append("<img src='" + data.weather[0].icon + "'>");
 						if (country == "US") {
 							console.log("US is working");
-							$(".weather").empty("");
 							temp = Math.round(temp * 1.8 + 32);
 							$("#temp").append(temp + "&#176;F");
-							$("#city").append(data.name);
-							$("#country").append(data.sys.country);
-							$("#icon").append("<img src='" + data.weather[0].icon + "'>");
 							function toFahrenheit() {
 								fahrenheitTemp = Math.round(temp);
 								console.log(fahrenheitTemp);
@@ -53,12 +53,7 @@ $(document).ready(function () {
 						})
 
 					} else {
-							console.log("Other");
-						$(".weather").empty("");
-						$("#temp").append(temp + "&#176;C");
-						$("#city").append(data.name);
-						$("#country").append(data.sys.country);
-						$("#icon").append("<img src='" + data.weather[0].icon + "'>");
+							console.log("Other country");
 						function toFahrenheit() {
 							fahrenheitTemp = Math.round(temp * 1.8 + 32);
 							console.log(fahrenheitTemp);
