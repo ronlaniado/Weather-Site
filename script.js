@@ -1,3 +1,4 @@
+var celsiusTemp;
 var fahrenheitTemp;
 var temp;
 var weather;
@@ -21,12 +22,37 @@ $(document).ready(function () {
 						country = data.sys.country;
 						weather = data.weather[0].main;
 						icon = data.weather[0].icon;
+						celsiusTemp = Math.round(data.main.temp)
 						console.log(temp);
 						console.log(city);
 						console.log(country);
 						console.log(weather);
 						console.log(icon);
 						console.log("showWeather() function is working");
+						if (country == "US") {
+							console.log("US is working");
+							$(".weather").empty("");
+							temp = Math.round(temp * 1.8 + 32);
+							$("#temp").append(temp + "&#176;F");
+							$("#city").append(data.name);
+							$("#country").append(data.sys.country);
+							$("#icon").append("<img src='" + data.weather[0].icon + "'>");
+							function toFahrenheit() {
+								fahrenheitTemp = Math.round(temp);
+								console.log(fahrenheitTemp);
+							}
+							$(".fahrenheit").click(function () {
+								toFahrenheit();
+								$("#temp").empty();
+								$("#temp").append(fahrenheitTemp + "&#176;F");
+						})
+						$(".celsius").click(function() {
+							$("#temp").empty();
+							$("#temp").append(celsiusTemp + "&#176;C")
+						})
+
+					} else {
+							console.log("Other");
 						$(".weather").empty("");
 						$("#temp").append(temp + "&#176;C");
 						$("#city").append(data.name);
@@ -42,6 +68,15 @@ $(document).ready(function () {
 							$("#temp").append(fahrenheitTemp + "&#176;F");
 
 						});
+							function toCelsius() {
+								celsiusTemp = Math.round(temp);
+								console.log(celsiusTemp);
+							}
+							$(".celsius").click(function() {
+								$("#temp").empty();
+								$("#temp").append(celsiusTemp + "&#176;C")
+							});
+					}
 					}
 				});
 			}
@@ -50,7 +85,6 @@ $(document).ready(function () {
 				showWeather();
 				console.log("Weather was refreshed.");
 					});
-
 	showWeather();
 		});
 	}
