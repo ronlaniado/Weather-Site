@@ -30,6 +30,7 @@ body {
   outline: none;
   box-shadow: none;
   border: none;
+  border-color: olive;
 }
 .weatherBox {
   height: 200px;
