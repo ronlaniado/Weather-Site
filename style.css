@@ -1,29 +1,62 @@
 html, body {
-  color: white;
-  font-family: 'Roboto', "Sans-Serif";
+  color: black;
+  font-family: "Roboto", "Sans-Serif";
   text-align: center;
-background-color: gray;
-font-size: 40px;
-//background-image: url("http://68.media.tumblr.com/62b5965afa8ebea1b6bb39046d9ec022/tumblr_myisgaZb0G1s85u2fo1_500.gif");
-//background-size: cover;
+  font-size: 28px;
 }
 
 .weatherButton {
-  font-size: 60px;
-  height: 90;
-  width: 240;
+  font-size: 24px;
+  height: 30;
+  width: 80;
+  outline: none;
+  box-shadow: none;
+  display: inline-flex;
 }
 body {
-  background-color: gray;
+  height: 100%;
+  min-height: 100%;
+  background-image: url("https://cdn.wallpapersafari.com/41/84/pRZrWj.jpg");
+  background-size: cover;
 }
+
 .buttons {
   font-size: 12px;
-  display: inline-block;
   border-radius: 0;
+  margin-top: 10px;
 }
 .buttons:focus {
   background: olive;
   outline: none;
   box-shadow: none;
   border: none;
+}
+.weatherBox {
+  height: 200px;
+  width: 350px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  align-items: center;
+  margin-top: 5%;
+  margin-left: 37%;
+  text-align: left;
+  align-self: center;
+}
+
+#city {
+  margin-left: 12px;
+  font-weight: lighter;
+}
+#country {
+  margin-left: 12px;
+  font-size: 18px;
+}
+#temp {
+  font-size: 46px;
+  margin-left: 11px;
+  font-weight: bold;
+}
+#icon {
+margin-left: 85%;
 }

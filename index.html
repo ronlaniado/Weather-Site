@@ -4,9 +4,10 @@
 
   <head>
     <title>Weather</title>
+    <script src="https://use.fontawesome.com/bebf3024f2.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel=stylesheet href="https://s3-us-west-2.amazonaws.com/colors-css/2.2.0/colors.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="animate.css">
@@ -14,18 +15,21 @@
   </head>
 
   <body>
-    <div class="nav-fixed-top">
-      <button class="btn btn-primary btn-sharp buttons celsius">C&#176
-      <button class="btn btn-primary btn-sharp buttons fahrenheit">F&#176
-        </div>
+    <div class="weatherBox">
       <div class="weather" id="icon"></div>
-      <div class="weather" id="temp">
-        </div>
       <div class="weather" id="city">
         </div>
       <div class="weather" id="country">
         </div>
-        <div class="text-center"><button class="btn btn-outline-primary btn-sx weatherButton" type="button">Refresh</button></div>
+      <div class="weather" id="temp">
+        </div>
+        <!--<div class="text-center"><button class="btn btn-outline-primary weatherButton" type="button"><i class="fa fa-refresh" aria-hidden="true"></i>
+</button></div>-->
+    </div>
+    <div class="nav-fixed-top row text-center col-xs-6 centered">
+      <button class="btn btn-primary buttons celsius col-xs-6 rounded-left text-center centered">C&#176</button>
+      <button class="btn btn-primary btn-sharp buttons fahrenheit col-xs-6 rounded-right text-center centered">F&#176</button>
+        </div>
 
 
 
