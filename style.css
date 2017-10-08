@@ -76,3 +76,12 @@ body {
   border-radius: 0;
   display: inline-block;
 }
+
+.btn-primary:focus {
+  background: olive;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  border-color: olive;
+  border-style: none;
+}
