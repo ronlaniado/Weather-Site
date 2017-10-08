@@ -11,7 +11,7 @@ html, body {
   width: 80;
   outline: none;
   box-shadow: none;
-  display: inline-flex;
+  display: inline-block;
 }
 
 body {
