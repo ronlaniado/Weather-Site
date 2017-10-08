@@ -23,7 +23,7 @@ body {
 
 .buttons {
   font-size: 12px;
-  border-radius: 0;
+  border-radius: 0 !important;
   outline: none;
   box-shadow: none;
   margin-top: 10px;
@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 
-.buttons:focus {
+.btn-primary:focus {
   background: olive;
   outline: none;
   box-shadow: none;
@@ -70,4 +70,9 @@ body {
 
 #icon {
   margin-left: 85%;
+}
+
+.btn-primary {
+  border-radius: 0;
+  display: inline-block;
 }
